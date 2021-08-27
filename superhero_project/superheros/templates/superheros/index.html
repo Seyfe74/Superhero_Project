@@ -10,12 +10,20 @@
     <h1> List of superheroes</h1>
     <ul>    
          {% for hero in all_heroes%}
-         <li> <h2> {{hero.name}}  <a href= "{% url 'superheros:detail' hero.id %}"><button> Detail</button></a></h2></li>
+         <li> <h2> {{hero.name}}  <a href= "{% url 'superheros:detail' hero.id %}"><button> Detail</button> </a>
+                                  <a href= "{% url 'superheros:detail' hero.id %}"><button> Edit</button> </a>
+                                  <a href= "{% url 'superheros:delete' hero.id %}"><button> Delete</button> </a>
+        
+        
+        
+        
+                </h2></li>
          {% endfor %}
 
 
 
     </ul>
     <a href="{% url 'superheros:create' %}"><button> Add New</button> </a>
+    
 </body>
 </html>
